@@ -1,0 +1,15 @@
+{
+    "name": "UserGroup",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20180823114933",
+    "entityTableName": "user_group",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ims"
+}

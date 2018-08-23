@@ -1,0 +1,29 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "users" : {
+            "home": {
+                "title": "Users",
+                "createLabel": "Users-ஐ உருவாக்கு",
+                "createOrEditLabel": "Users -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Users"
+            },
+            "created": "Users புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Users மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Users நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Users {{ id }}?"
+            },
+            "detail": {
+                "title": "Users"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "commissionPct": "Commission Pct",
+            "userGroup": "User Group",
+            "tenant": "Tenant"
+        }
+    }
+}

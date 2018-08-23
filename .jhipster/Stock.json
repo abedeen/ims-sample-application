@@ -1,0 +1,49 @@
+{
+    "name": "Stock",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sku",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "itemId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "users",
+            "otherEntityName": "users",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "userGroup",
+            "otherEntityName": "userGroup",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180823114934",
+    "entityTableName": "stock",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "ims"
+}

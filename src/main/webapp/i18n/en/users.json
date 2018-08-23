@@ -1,0 +1,29 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "users" : {
+            "home": {
+                "title": "Users",
+                "createLabel": "Create a new Users",
+                "createOrEditLabel": "Create or edit a Users",
+                "search": "Search for Users"
+            },
+            "created": "A new Users is created with identifier {{ param }}",
+            "updated": "A Users is updated with identifier {{ param }}",
+            "deleted": "A Users is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Users {{ id }}?"
+            },
+            "detail": {
+                "title": "Users"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "commissionPct": "Commission Pct",
+            "userGroup": "User Group",
+            "tenant": "Tenant"
+        }
+    }
+}

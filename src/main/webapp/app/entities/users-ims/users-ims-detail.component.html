@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="users">
+            <h2><span jhiTranslate="inventoryManagementSystemApp.users.detail.title">Users</span> {{users.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{users.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{users.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.email">Email</span></dt>
+                <dd>
+                    <span>{{users.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{users.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.commissionPct">Commission Pct</span></dt>
+                <dd>
+                    <span>{{users.commissionPct}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.userGroup">User Group</span></dt>
+                <dd>
+                    <div *ngIf="users.userGroupId">
+                        <a [routerLink]="['/user-group-ims', users.userGroupId, 'view']">{{users.userGroupId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.users.tenant">Tenant</span></dt>
+                <dd>
+                    <div *ngIf="users.tenantId">
+                        <a [routerLink]="['/tenant-ims', users.tenantId, 'view']">{{users.tenantId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/users-ims', users.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

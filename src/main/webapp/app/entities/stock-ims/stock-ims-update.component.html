@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-stock-ims-heading" jhiTranslate="inventoryManagementSystemApp.stock.home.createOrEditLabel">Create or edit a Stock</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!stock.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="stock.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="stock.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.sku" for="field_sku">Sku</label>
+                    <input type="text" class="form-control" name="sku" id="field_sku"
+                        [(ngModel)]="stock.sku" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.itemId" for="field_itemId">Item Id</label>
+                    <input type="text" class="form-control" name="itemId" id="field_itemId"
+                        [(ngModel)]="stock.itemId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.price" for="field_price">Price</label>
+                    <input type="number" class="form-control" name="price" id="field_price"
+                        [(ngModel)]="stock.price" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.quantity" for="field_quantity">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" id="field_quantity"
+                        [(ngModel)]="stock.quantity" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.users" for="field_users">Users</label>
+                    <select class="form-control" id="field_users" name="users" [(ngModel)]="stock.usersId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="usersOption.id" *ngFor="let usersOption of users; trackBy: trackUsersById">{{usersOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="inventoryManagementSystemApp.stock.userGroup" for="field_userGroup">User Group</label>
+                    <select class="form-control" id="field_userGroup" name="userGroup" [(ngModel)]="stock.userGroupId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userGroupOption.id" *ngFor="let userGroupOption of usergroups; trackBy: trackUserGroupById">{{userGroupOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "userGroup" : {
+            "home": {
+                "title": "User Groups",
+                "createLabel": "User Group-ஐ உருவாக்கு",
+                "createOrEditLabel": "User Group -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for User Group"
+            },
+            "created": "User Group புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "User Group மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A User Group நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் User Group {{ id }}?"
+            },
+            "detail": {
+                "title": "User Group"
+            }
+        }
+    }
+}

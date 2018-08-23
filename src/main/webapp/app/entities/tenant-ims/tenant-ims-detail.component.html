@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tenant">
+            <h2><span jhiTranslate="inventoryManagementSystemApp.tenant.detail.title">Tenant</span> {{tenant.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.company">Company</span></dt>
+                <dd>
+                    <span>{{tenant.company}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.contactEmail">Contact Email</span></dt>
+                <dd>
+                    <span>{{tenant.contactEmail}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.contactName">Contact Name</span></dt>
+                <dd>
+                    <span>{{tenant.contactName}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.contactPhone">Contact Phone</span></dt>
+                <dd>
+                    <span>{{tenant.contactPhone}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.contactTitle">Contact Title</span></dt>
+                <dd>
+                    <span>{{tenant.contactTitle}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.department">Department</span></dt>
+                <dd>
+                    <span>{{tenant.department}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.email">Email</span></dt>
+                <dd>
+                    <span>{{tenant.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.logo">Logo</span></dt>
+                <dd>
+                    <span>{{tenant.logo}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.name">Name</span></dt>
+                <dd>
+                    <span>{{tenant.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.password">Password</span></dt>
+                <dd>
+                    <span>{{tenant.password}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.title">Title</span></dt>
+                <dd>
+                    <span>{{tenant.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.userName">User Name</span></dt>
+                <dd>
+                    <span>{{tenant.userName}}</span>
+                </dd>
+                <dt><span jhiTranslate="inventoryManagementSystemApp.tenant.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{tenant.uuid}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/tenant-ims', tenant.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
