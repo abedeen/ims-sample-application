@@ -1,0 +1,73 @@
+
+entity Tenant{
+id String,
+company String,
+contactEmail String,
+contactName String,
+contactPhone String,
+contactTitle String,
+department String,
+email String,
+logo String,
+name String,
+password String,
+title String,
+userGroups String,
+userName String,
+uuid String
+}
+
+entity UserGroup{
+id String
+}
+entity Stock{
+id String,
+name String,
+sku String,
+itemId String,
+price Long,
+quantity String
+}
+entity Orders{
+id String,
+sku String,
+purchaseQuantity Long
+}
+entity User {
+	id String,
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	commissionPct Long
+}
+
+
+relationship ManyToOne {
+	User{userGroup} to UserGroup,
+    User{tenant} to Tenant,
+     Stock{user} to User,
+     Stock{userGroup} to UserGroup,
+      Orders{stock} to Stock,
+      Orders{user} to User
+
+      
+}
+
+// defining multiple oneToOne relationships
+/*relationship OneToOne {
+	//JobHistory{job} to Job,
+	//JobHistory{department} to Department,
+//	JobHistory{Users} to Users
+//}
+*/
+// Set pagination options
+
+paginate Stock,Orders,Tenant,UserGroup,Users with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with ims
