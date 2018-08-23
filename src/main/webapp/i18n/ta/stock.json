@@ -1,0 +1,29 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "stock" : {
+            "home": {
+                "title": "Stocks",
+                "createLabel": "Stock-ஐ உருவாக்கு",
+                "createOrEditLabel": "Stock -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Stock"
+            },
+            "created": "Stock புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Stock மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Stock நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Stock {{ id }}?"
+            },
+            "detail": {
+                "title": "Stock"
+            },
+            "name": "Name",
+            "sku": "Sku",
+            "itemId": "Item Id",
+            "price": "Price",
+            "quantity": "Quantity",
+            "users": "Users",
+            "userGroup": "User Group"
+        }
+    }
+}

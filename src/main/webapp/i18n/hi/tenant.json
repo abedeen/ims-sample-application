@@ -1,0 +1,35 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "tenant" : {
+            "home": {
+                "title": "Tenants",
+                "createLabel": "नया Tenant बनाएँ",
+                "createOrEditLabel": "Tenant बनाएँ या संपादित करें",
+                "search": "Tenant खोजें"
+            },
+            "created": "एक नया Tenant [identifier: {{ param }}] तैयार है",
+            "updated": "एक Tenant [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Tenant [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Tenant [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Tenant"
+            },
+            "company": "Company",
+            "contactEmail": "Contact Email",
+            "contactName": "Contact Name",
+            "contactPhone": "Contact Phone",
+            "contactTitle": "Contact Title",
+            "department": "Department",
+            "email": "Email",
+            "logo": "Logo",
+            "name": "Name",
+            "password": "Password",
+            "title": "Title",
+            "userName": "User Name",
+            "uuid": "Uuid"
+        }
+    }
+}

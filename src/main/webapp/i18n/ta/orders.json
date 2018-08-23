@@ -1,0 +1,26 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "orders" : {
+            "home": {
+                "title": "Orders",
+                "createLabel": "Orders-ஐ உருவாக்கு",
+                "createOrEditLabel": "Orders -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Orders"
+            },
+            "created": "Orders புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Orders மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Orders நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Orders {{ id }}?"
+            },
+            "detail": {
+                "title": "Orders"
+            },
+            "sku": "Sku",
+            "purchaseQuantity": "Purchase Quantity",
+            "stock": "Stock",
+            "users": "Users"
+        }
+    }
+}

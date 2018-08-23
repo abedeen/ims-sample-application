@@ -1,0 +1,35 @@
+
+{
+    "inventoryManagementSystemApp": {
+        "tenant" : {
+            "home": {
+                "title": "Tenants",
+                "createLabel": "Tenant-ஐ உருவாக்கு",
+                "createOrEditLabel": "Tenant -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Tenant"
+            },
+            "created": "Tenant புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Tenant மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Tenant நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Tenant {{ id }}?"
+            },
+            "detail": {
+                "title": "Tenant"
+            },
+            "company": "Company",
+            "contactEmail": "Contact Email",
+            "contactName": "Contact Name",
+            "contactPhone": "Contact Phone",
+            "contactTitle": "Contact Title",
+            "department": "Department",
+            "email": "Email",
+            "logo": "Logo",
+            "name": "Name",
+            "password": "Password",
+            "title": "Title",
+            "userName": "User Name",
+            "uuid": "Uuid"
+        }
+    }
+}
