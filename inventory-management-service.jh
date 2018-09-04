@@ -8,16 +8,13 @@ contactPhone String,
 contactTitle String,
 department String,
 email String,
-logo String,
-name String,
-password String,
-title String,
-userName String,
-uuid String
+logoURL String,
+name String
 }
 
 entity UserGroup{
-id String
+id String,
+groupName String
 }
 entity Stock{
 id String,
@@ -27,11 +24,51 @@ itemId String,
 price Long,
 quantity String
 }
+entity OrderItems{
+Category String,
+condition String,
+price String,
+quantity String,
+vendor String,
+status String,
+receiveDate Date,
+totalSpending Long,
+currency String,
+item StatusId,
+quantityIn Long,
+quantityOut Long
+notes String
+}
 entity Orders{
 id String,
-sku String,
-purchaseQuantity Long
+orderReferenceNumber String,
+orderDate Date,
+name String,
+statusId String,
+notes String
 }
+entity OrderStatus{
+id String,
+name String
+}
+entity Vendors{
+id String,
+name String,
+url String,
+address String,
+contactPerson String
+}
+entity Category{
+id String,
+name String,
+parentId String,
+categoryLevel String
+}
+entity Condition{
+id String,
+name String
+}
+
 entity Users {
 	id String,
 	firstName String,
@@ -40,17 +77,24 @@ entity Users {
 	phoneNumber String,
 	commissionPct Long
 }
-
-
+entity ProdName {
+id String,
+name String
+}
+relationship OneToOne{
+OrderItems {status} to OrderStatus
+Orders{vendors} to Vendors
+OrderItems{category} to Category
+OrderItems{condition} to Condition
+OrderItems{names} to ProdName  
+}
 relationship ManyToOne {
 	Users{userGroup} to UserGroup,
     Users{tenant} to Tenant,
      Stock{users} to Users,
      Stock{userGroup} to UserGroup,
-      Orders{stock} to Stock,
-      Orders{users} to Users
-
-      
+      OrderItems{orderItems} to Orders,
+      OrderItems{users} to Stock    
 }
 
 // defining multiple oneToOne relationships
